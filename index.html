@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Company</title>
+    <link rel="stylesheet" href="css/normalize.css"/>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <div class="main">
+    <header>
+        <img src='img/logo.png' alt="logo" />
+        <div class=item>
+            <div class = 'sel aktuelles'>
+                <a href="">Aktuelles</a>
+            </div>
+            <div class = 'sel philosophie'>
+                <a href="">Philosophie</a>
+            </div>
+            <div class = 'sel besonderheiten'>
+                <a href="">Besonderheiten</a>
+            </div>
+            <div class = 'sel parner'>
+                <a href="">Parner</a>
+            </div>
+            <div class = 'sel kontakt'>
+                <a href="">Kontakt</a>
+            </div>
+            <div class = 'sel impressum'>
+                <a href="">Impressum</a>
+            </div>
+    </header>
+    <div class="aktuelles-img slideshow-container">
+        <div class='mySlides fade'>
+            <img src='img/i1.png' />
+        </div>
+
+        <div class='mySlides fade'>
+            <img src='img/i2.png' />
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <div class='main-content'>
+        <div class="content">
+            <h1>Sehr geehrte Patienten,</h1>
+            <br>
+            wir freuen uns, dass Sie sich für unsere Praxis für moderne Zahnheilkunde interessieren – herzlich willkommen!
+            <br>
+            <br>
+            Die Homepage soll Ihnen einen ersten Einblick in das Leistungsspektrum und die Behandlungsphilosophie vermitteln. Es wird Sie interessieren, wie schonend und sorgsam ein Zahnarztbesuch sein kann.
+            <br>
+            <br>
+            Sie sind herzlich eingeladen, sich bei einem Besuch in meiner Praxis mit ihren Fragen und Wünschen anzuvertrauen.
+            <br>
+            <br>
+            <br>
+            Ihre Dr. Dr. Günther Chmelitschek und Dr. Thomas Chmelitschek
+        </div>
+        <div class="contacts">
+            <h1>Sprechzeiten</h1>
+            <p>
+                Zahnarztpraxis Dr. Dr. Chmelitschek 
+                <br> 
+                Stollstr. 6 
+                <br>
+                83022 Rosenheim
+            </p>
+            <p>
+                Mo-Fr von 08:00-18:00 Uhr
+                <br>
+                und nach Vereinbarung
+            </p>
+        </div>         
+    </div>
+    <footer>
+        Zahnarztpraxis Chmelitschek © 2011
+    </footer>
+    </div>
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+          }
+          slides[slideIndex-1].style.display = "block";
+        }
+    </script>
+</body>
+</html>
